@@ -29,7 +29,7 @@ class Metadata
 	end
 
 	def parse_from (line)
-		line.match /^>*From ([^\s]+) (.{24})/ do |m|
+		line.match /^>*From ([^\s]+) (.{30})/ do |m|
 			@from << Struct.new(:name, :date).new(m[1], m[2])
 		end
 	end
